@@ -147,7 +147,7 @@
     height: 527px;
     top: 105px;
     left: 317px;
-    background-image: url(img/Dashboard-cewe.jpg);
+    background-image: url(img_landing/Dashboard-cewe.jpg);
     background-size: cover;
     background-position: 50% 50%;
     border: #ffffff 10px solid;
@@ -181,6 +181,8 @@
     height: 36px;
     top: 112px;
     left: 0;
+    background-color: #6ab4d4;
+    border-radius: 25px;
   }
   
   .landing-page .div-wrapper {
@@ -258,7 +260,10 @@
   }
   
   .landing-page .text-wrapper-7 {
+    font-family: "Fredoka One-Regular", Helvetica;
+    font-weight: 400;
     font-size: 24px;
+    color: #6ab4d4;
   }
   
   .landing-page .overlap-2 {
@@ -288,7 +293,7 @@
     position: absolute;
     top: 3px;
     left: 652px;
-    font-family: "Outfit-Regular", Helvetica;
+    font-family: "Fredoka One-Regular", Helvetica;
     font-weight: 400;
     color: #fffbfb;
     font-size: 18px;
@@ -308,6 +313,7 @@
   
   .landing-page .navigation-elements {
     position: absolute;
+    background-color: #eaf2fd;
     width: 255px;
     height: 40px;
     top: 24px;
@@ -347,12 +353,13 @@
     left: 86px;
     font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
     font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
-    color: var(--blue-1);
+    color: #2f80ed;
     font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
     letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
     line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
     white-space: nowrap;
     font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
   }
   
   .landing-page .navigation-elements-2 {
@@ -378,12 +385,13 @@
     left: 86px;
     font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
     font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
-    color: var(--black-high-emphasis);
+    color: #000000de;
     font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
     letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
     line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
     white-space: nowrap;
     font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
   }
   
   .landing-page .navigation-elements-3 {
@@ -401,12 +409,13 @@
     left: 86px;
     font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
     font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
-    color: var(--black-high-emphasis);
+    color: #000000de;
     font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
     letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
     line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
     white-space: nowrap;
     font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
   }
   
   .landing-page .navigation-elements-4 {
@@ -424,12 +433,13 @@
     left: 86px;
     font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
     font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
-    color: var(--black-high-emphasis);
+    color: #000000de;
     font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
     letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
     line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
     white-space: nowrap;
     font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
   }
   
   .landing-page .navigation-elements-5 {
@@ -472,3 +482,53 @@
     left: 0;
   }
   
+  .landing-page .text-wrapper-13 {
+    position: absolute;
+    width: 137px;
+    top: 10px;
+    left: 86px;
+    font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+    font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+    color: #000000de;
+    font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+    letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+    line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+    white-space: nowrap;
+    font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .landing-page .text-wrapper-14 {
+    position: absolute;
+    width: 137px;
+    top: 10px;
+    left: 86px;
+    font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+    font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+    color: #000000de;
+    font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+    letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+    line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+    white-space: nowrap;
+    font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .landing-page .text-wrapper-10:hover {color: #2f80ed;
+    transform: scale(1.1);
+}
+  .landing-page .text-wrapper-12:hover {color: #2f80ed;
+    transform: scale(1.1);
+  }
+  .landing-page .text-wrapper-14:hover {color: #2f80ed;
+    transform: scale(1.1);
+  }
+  .landing-page .text-wrapper-13:hover {color: #2f80ed;
+    transform: scale(1.1);
+  }
+  .landing-page .text-wrapper-11:hover {color: #2f80ed;
+    transform: scale(1.1);
+  }
+  .landing-page .text-wrapper-9:hover {color: #2f80ed;
+    transform: scale(1.1);
+  }

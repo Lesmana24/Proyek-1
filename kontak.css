@@ -1,0 +1,448 @@
+.kontak-kami {
+    background-color: #f5f3f6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .kontak-kami .div {
+    background-color: var(--variable-collection-grey-bg);
+    overflow: hidden;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .kontak-kami .text-wrapper {
+    position: absolute;
+    width: 295px;
+    top: 128px;
+    left: 317px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .kontak-kami .overlap {
+    position: absolute;
+    width: 552px;
+    height: 414px;
+    top: 192px;
+    left: 850px;
+    background-color: #ffffff;
+  }
+  
+  .kontak-kami .p {
+    position: absolute;
+    width: 383px;
+    top: 165px;
+    left: 105px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .kontak-kami .text-wrapper-2 {
+    position: absolute;
+    width: 248px;
+    top: 256px;
+    left: 105px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: underline;
+  }
+  
+  .kontak-kami .text-wrapper-3 {
+    position: absolute;
+    width: 248px;
+    top: 139px;
+    left: 105px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .kontak-kami .text-wrapper-4 {
+    position: absolute;
+    width: 248px;
+    top: 232px;
+    left: 105px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .kontak-kami .tdesign-location {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 136px;
+    left: 64px;
+  }
+  
+  .kontak-kami .vector {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 231px;
+    left: 68px;
+  }
+  
+  .kontak-kami .background {
+    position: absolute;
+    width: 1085px;
+    height: 313px;
+    top: 630px;
+    left: 317px;
+    object-fit: cover;
+  }
+  
+  .kontak-kami .overlap-group {
+    position: absolute;
+    width: 255px;
+    height: 372px;
+    top: 105px;
+    left: 31px;
+    background-color: #ffffff;
+    border-radius: 14px;
+  }
+  
+  .kontak-kami .navigation-elements {
+    position: absolute;
+    width: 255px;
+    height: 40px;
+    top: 24px;
+    left: 0;
+  }
+  
+  .kontak-kami .img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 8px;
+    left: 38px;
+  }
+  
+.kontak-kami .text-wrapper-5 {
+    position: absolute;
+    width: 142px;
+    top: 10px;
+    left: 86px;
+    font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+    font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+    color: #000000de;
+    font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+    letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+    line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+    white-space: nowrap;
+    font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.kontak-kami .text-wrapper-5:hover {
+    color: #2f80ed;
+    transform: scale(1.1);
+}
+.kontak-kami .text-wrapper-6:hover {
+    color: #2f80ed;
+    transform: scale(1.1);
+}
+.kontak-kami .text-wrapper-7:hover {
+    color: #2f80ed;
+    transform: scale(1.1);
+}
+
+.kontak-kami .text-wrapper-8:hover {
+    color: #2f80ed;
+    transform: scale(1.1);
+}
+
+.kontak-kami .text-wrapper-9:hover {
+    color: #2f80ed;
+    transform: scale(1.1);
+}
+.kontak-kami .text-wrapper-10:hover {
+    color: #2f80ed;
+    transform: scale(1.1);
+}
+  .kontak-kami .navigation-elements-2 {
+    top: 64px;
+    position: absolute;
+    width: 255px;
+    height: 40px;
+    left: 0;
+  }
+  
+  .kontak-kami .icon-social-people {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 11px;
+    left: 38px;
+  }
+  
+  .kontak-kami .text-wrapper-6 {
+    position: absolute;
+    width: 141px;
+    top: 13px;
+    left: 86px;
+    font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+    font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+    color: #000000;
+    font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+    letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+    line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+    white-space: nowrap;
+    font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .kontak-kami .navigation-elements-3 {
+    top: 111px;
+    position: absolute;
+    width: 255px;
+    height: 40px;
+    left: 0;
+  }
+  
+  .kontak-kami .text-wrapper-7 {
+    position: absolute;
+    width: 137px;
+    top: 10px;
+    left: 86px;
+    font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+    font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+    color: var(--black-high-emphasis);
+    font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+    letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+    line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+    white-space: nowrap;
+    font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .kontak-kami .navigation-elements-4 {
+    top: 159px;
+    position: absolute;
+    width: 255px;
+    height: 40px;
+    left: 0;
+  }
+  
+  .kontak-kami .text-wrapper-8 {
+    position: absolute;
+    width: 136px;
+    top: 10px;
+    left: 86px;
+    font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+    font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+    color: var(--black-high-emphasis);
+    font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+    letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+    line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+    white-space: nowrap;
+    font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .kontak-kami .navigation-elements-5 {
+    top: 303px;
+    position: absolute;
+    width: 255px;
+    height: 40px;
+    left: 0;
+  }
+  
+  .kontak-kami .ri-logout-circle-r {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 5px;
+    left: 36px;
+  }
+  
+  .kontak-kami .navigation-elements-6 {
+    top: 207px;
+    position: absolute;
+    width: 255px;
+    height: 40px;
+    left: 0;
+  }
+  
+  .kontak-kami .text-wrapper-9 {
+    position: absolute;
+    width: 137px;
+    top: 10px;
+    left: 86px;
+    font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+    font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+    color: #000000;
+    font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+    letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+    line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+    white-space: nowrap;
+    font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .kontak-kami .navigation-elements-7 {
+    top: 255px;
+    background-color: #eaf2fd;
+    position: absolute;
+    width: 255px;
+    height: 40px;
+    left: 0;
+  }
+  
+  .kontak-kami .ionicons-svg-md-help {
+    position: absolute;
+    width: 24px;
+    height: 22px;
+    top: 0;
+    left: 0;
+  }
+  
+  .kontak-kami .text-wrapper-10 {
+    position: absolute;
+    width: 137px;
+    top: 10px;
+    left: 86px;
+    font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+    font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+    color: #2f80ed;
+    font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+    letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+    line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+    white-space: nowrap;
+    font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .kontak-kami .group {
+    position: absolute;
+    width: 1440px;
+    height: 67px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 1px #00000040;
+  }
+  
+  .kontak-kami .AWAN-laundry-wrapper {
+    position: relative;
+    width: 103px;
+    height: 40px;
+    top: 13px;
+    left: 71px;
+  }
+  
+  .kontak-kami .AWAN-laundry {
+    position: absolute;
+    width: 101px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    font-family: "Fredoka One-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-color);
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+  
+  .kontak-kami .span {
+    font-family: "Fredoka One-Regular", Helvetica;
+    font-weight: 400;
+    color: #6ab4d4;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+  
+  .kontak-kami .text-wrapper-11 {
+    font-size: 24px;
+  }
+  
+  .kontak-kami .overlap-group-wrapper {
+    position: absolute;
+    width: 1442px;
+    height: 28px;
+    top: 67px;
+    left: 0;
+  }
+  
+  .kontak-kami .div-wrapper {
+    position: relative;
+    width: 1440px;
+    height: 28px;
+    background-color: #6ab4d4;
+  }
+  
+  .kontak-kami .text-wrapper-12 {
+    position: absolute;
+    top: 3px;
+    left: 652px;
+    font-family: "Outfit-Regular", Helvetica;
+    font-weight: 400;
+    color: #fffbfb;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .kontak-kami .background-2 {
+    position: absolute;
+    width: 533px;
+    height: 414px;
+    top: 192px;
+    left: 317px;
+    object-fit: cover;
+  }
+  
+  .kontak-kami .overlap-wrapper {
+    position: absolute;
+    width: 1442px;
+    height: 61px;
+    top: 963px;
+    left: 0;
+  }
+  
+  .kontak-kami .overlap-2 {
+    position: relative;
+    width: 1440px;
+    height: 61px;
+    background-color: #ffffff;
+  }
+  
+  .kontak-kami .text-wrapper-13 {
+    position: absolute;
+    width: 415px;
+    top: 14px;
+    left: 512px;
+    font-family: "Outfit-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-font-navbar);
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
