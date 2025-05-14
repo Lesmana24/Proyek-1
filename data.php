@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "laundry";
-
-ini_set('memory_limit', '1G');
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+include 'koneksi.php';
 
 $sql = "SELECT ID_PLG, Nama_PLG, Email_PLG, No_TLP_PLG,ALAMAT_PLG FROM pelanggan ORDER BY ID_PLG DESC";
 $result = $conn->query($sql);
@@ -158,11 +147,13 @@ $conn->close();
           </div>
           <div class="navigation-elements-2">
             <img class="icon-social-people" src="img_data/profile-icon.png" />
-            <div class="text-wrapper-3">Admin</div>
+            <div class="text-wrapper-3">
+              <a href="#">Admin</a></div>
           </div>
           <div class="navigation-elements-3">
             <img class="nav-icon" src="img_data/pesan-icon.png" />
-            <div class="text-wrapper-4">Paket &amp; Pemesanan</div>
+            <div class="text-wrapper-4">
+              <a href="paket.php">Paket</a></div>
           </div>
           <div class="navigation-elements-4">
             <div class="text-wrapper-4">Keluar</div>
