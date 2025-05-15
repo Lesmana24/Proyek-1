@@ -1,7 +1,8 @@
 <?php
 include 'koneksi.php';
 
-$sql_paket = "SELECT ID_PKT, Nama_PKT, HRG_PKT, Deskripsi_PKT FROM paket ORDER BY ID_PKT ASC";
+// Perbaikan: gunakan nama kolom yang konsisten (gambar)
+$sql_paket = "SELECT ID_PKT, Nama_PKT, HRG_PKT, Deskripsi_PKT, gambar FROM paket ORDER BY ID_PKT ASC";
 $result_paket = $conn->query($sql_paket);
 $paket_data = [];
 
@@ -23,11 +24,13 @@ function generatePaketId($conn) {
         return 'L001';
     }
 }
+
 if (isset($_POST['save_paket'])) {
     $id = $_POST['id'];
     $nama = $conn->real_escape_string($_POST['nama']);
     $harga = (int)$_POST['harga'];
     $deskripsi = $conn->real_escape_string($_POST['deskripsi']);
+    $gambar_path = '';
     
     // Validasi input
     if(empty($nama) || $harga <= 0 ) {
@@ -36,13 +39,50 @@ if (isset($_POST['save_paket'])) {
         exit();
     }
 
+    // Handle upload gambar (DIPINDAHKAN KE DALAM BLOCK save_paket)
+    if (!empty($_FILES['gambar']['name'])) {
+        $target_dir = "img_paket/";
+        if (!file_exists($target_dir)) {
+            mkdir($target_dir, 0777, true);
+        }
+        
+        $file_extension = pathinfo($_FILES['gambar']['name'], PATHINFO_EXTENSION);
+        $filename = uniqid() . '.' . $file_extension;
+        $target_file = $target_dir . $filename;
+        
+        // Validasi file gambar
+        $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
+        if (!in_array(strtolower($file_extension), $allowed_types)) {
+            $_SESSION['error'] = "Hanya file JPG, JPEG, PNG & GIF yang diperbolehkan.";
+            header("Location: ".$_SERVER['PHP_SELF']);
+            exit();
+        }
+        
+        if (move_uploaded_file($_FILES['gambar']['tmp_name'], $target_file)) {
+            $gambar_path = $target_file;
+            
+            // Hapus gambar lama jika edit
+            if (!empty($_POST['old_image'])) {
+                if (file_exists($_POST['old_image'])) {
+                    unlink($_POST['old_image']);
+                }
+            }
+        } else {
+            $_SESSION['error'] = "Maaf, terjadi error saat upload gambar.";
+            header("Location: ".$_SERVER['PHP_SELF']);
+            exit();
+        }
+    } elseif (!empty($_POST['old_image'])) {
+        $gambar_path = $_POST['old_image'];
+    }
+
     if (empty($id)) {
         $id = generatePaketId($conn);
-        $stmt = $conn->prepare("INSERT INTO paket (ID_PKT, Nama_PKT, HRG_PKT, Deskripsi_PKT) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssis", $id, $nama, $harga, $deskripsi);
+        $stmt = $conn->prepare("INSERT INTO paket (ID_PKT, Nama_PKT, HRG_PKT, Deskripsi_PKT, gambar) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssiss", $id, $nama, $harga, $deskripsi, $gambar_path);
     } else {
-        $stmt = $conn->prepare("UPDATE paket SET Nama_PKT = ?, HRG_PKT = ?, Deskripsi_PKT = ? WHERE ID_PKT = ?");
-        $stmt->bind_param("siss", $nama, $harga, $deskripsi, $id);
+        $stmt = $conn->prepare("UPDATE paket SET Nama_PKT = ?, HRG_PKT = ?, Deskripsi_PKT = ?, gambar = ? WHERE ID_PKT = ?");
+        $stmt->bind_param("sisss", $nama, $harga, $deskripsi, $gambar_path, $id);
     }
     
     if ($stmt->execute()) {
@@ -57,9 +97,25 @@ if (isset($_POST['save_paket'])) {
 
 if (isset($_GET['delete_paket'])) {
     $id = $_GET['delete_paket'];
+    
+    // Ambil path gambar sebelum menghapus data
+    $sql = "SELECT gambar FROM paket WHERE ID_PKT = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $stmt->close();
+    
+    // Hapus data dari database
     $stmt = $conn->prepare("DELETE FROM paket WHERE ID_PKT = ?");
     $stmt->bind_param("s", $id);
+    
     if ($stmt->execute()) {
+        // Hapus file gambar jika ada
+        if (!empty($row['gambar']) && file_exists($row['gambar'])) {
+            unlink($row['gambar']);
+        }
         $_SESSION['success'] = "Data berhasil dihapus!";
     } else {
         $_SESSION['error'] = "Error: " . $stmt->error;
@@ -155,6 +211,7 @@ $conn->close();
                                 <th>Nama Paket</th>
                                 <th>Harga</th>
                                 <th>Deskripsi</th>
+                                <th>Gambar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -165,6 +222,13 @@ $conn->close();
                                         <td><?= htmlspecialchars($paket['Nama_PKT']) ?></td>
                                         <td class="harga-cell">Rp <?= number_format($paket['HRG_PKT'], 0, ',', '.') ?></td>
                                         <td><?= !empty($paket['Deskripsi_PKT']) ? htmlspecialchars($paket['Deskripsi_PKT']) : '' ?></td>
+                                        <td>
+                                         <?php if (!empty($paket['gambar'])): ?>
+                                        <img src="<?= $paket['gambar'] ?>" alt="Gambar Paket" style="max-width: 100px; max-height: 100px;">
+                                        <?php else: ?>
+                                        <span>Tidak ada gambar</span>
+                                     <?php endif; ?>
+                                    </td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php else: ?>
@@ -177,13 +241,15 @@ $conn->close();
                 </div>
             </div>
     <!-- Modal Tambah/Edit Paket -->
-    <!-- Tempatkan modal di luar container utama -->
+<!-- Modal Tambah/Edit Paket -->
 <div id="paketModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('paketModal')">&times;</span>
         <h2>Kelola Paket Laundry</h2>
-        <form method="POST" action="">
+        <!-- TAMBAHKAN enctype="multipart/form-data" -->
+        <form method="POST" action="" enctype="multipart/form-data">
             <input type="hidden" name="id" id="paket_id">
+            <input type="hidden" name="old_image" id="old_image">
             <div class="form-group">
                 <label for="nama">Nama Paket:</label>
                 <input type="text" id="nama" name="nama" required>
@@ -195,6 +261,11 @@ $conn->close();
             <div class="form-group">
                 <label for="deskripsi">Deskripsi:</label>
                 <textarea id="deskripsi" name="deskripsi" rows="3" style="width: 100%;"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="gambar">Gambar Paket:</label>
+                <input type="file" id="gambar" name="gambar" accept="image/*">
+                <div id="image-preview" style="margin-top: 10px;"></div>
             </div>
             <button type="submit" name="save_paket" class="submit-btn">Simpan</button>
         </form>

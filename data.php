@@ -83,6 +83,16 @@ if (isset($_POST['save_transaksi'])) {
   $id_pkt = $_POST['id_pkt']; 
   $total = $_POST['total'];
   $status = $_POST['status'];
+  // Validasi input
+  $total = (float)$_POST['total'];
+  if ($total <= 0) {
+      die("Total harga harus lebih dari 0");
+  }
+  
+  $allowed_status = ['Proses', 'Selesai', 'Batal'];
+  if (!in_array($status, $allowed_status)) {
+      die("Status tidak valid");
+  }
   
   if (empty($id)) {
       // Generate ID baru untuk transaksi
@@ -134,6 +144,7 @@ $conn->close();
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="data.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.0/css/dataTables.dataTables.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   </head>
   <body>
@@ -231,10 +242,10 @@ $conn->close();
     </button>
 </div>
         <div class="table-scroll-wrapper">
-          <table class="transaction-table">
+          <table class="display" id="transaksi">
             <thead>
               <tr>
-                <th>Tanggal</th>
+                <th style="text-align: center;">Tanggal</th>
                 <th>ID Transaksi</th>
                 <th>Pelanggan</th>
                 <th>Paket</th>
@@ -246,7 +257,7 @@ $conn->close();
               <?php if (!empty($transaksi_data)): ?>
                 <?php foreach ($transaksi_data as $transaksi): ?>
                   <tr data-id="<?= htmlspecialchars($transaksi['ID_TRS']) ?>" data-id-plg="<?= $transaksi['ID_PLG'] ?>">
-    <td><?= htmlspecialchars($transaksi['TGL_TRS']) ?></td>
+    <td style="text-align: center;"><?= htmlspecialchars($transaksi['TGL_TRS']) ?></td>
     <td><?= htmlspecialchars($transaksi['ID_TRS']) ?></td>
     <td>
         <?php
@@ -362,5 +373,12 @@ $conn->close();
   </div>
 </div>
     <script src="data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.0/js/dataTables.js"></script>
+    <script>
+      $(document).ready(function() {
+    $("#transaksi").DataTable();
+  });
+    </script>
   </body>
 </html>
