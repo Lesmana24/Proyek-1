@@ -41,7 +41,7 @@ if (isset($_POST['save_paket'])) {
 
     // Handle upload gambar (DIPINDAHKAN KE DALAM BLOCK save_paket)
     if (!empty($_FILES['gambar']['name'])) {
-        $target_dir = "img_paket/";
+        $target_dir = "paket/";
         if (!file_exists($target_dir)) {
             mkdir($target_dir, 0777, true);
         }
@@ -159,7 +159,7 @@ $conn->close();
           <div class="navigation-elements-2">
             <img class="icon-social-people" src="img_paket/data-icon.png" />
             <div class="text-wrapper-2">
-                <a href="data.php">Admin</a>
+                <a href="data/data.php">Admin</a>
             </div>
           </div>
           <div class="navigation-elements-3">

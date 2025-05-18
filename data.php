@@ -171,7 +171,9 @@ $conn->close();
             <img class="ri-logout-circle-r" src="img_data/keluar-icon.png" />
           </div>
           <div class="navigation-elements-5">
-            <div class="text-wrapper-4">Ulasan</div>
+            <div class="text-wrapper-4">
+              <a href="catatan.php">Pencatatan</a>
+            </div>
             <img class="nav-icon" src="img_data/ulasan-icon.png" />
           </div>
         </div>

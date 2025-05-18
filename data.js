@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Aktifkan tombol edit dan hapus
             document.getElementById('editSelectedTransaksi').disabled = false;
-            document.getElementById('deleteSelectedTransaksi').disabled = false;
         });
     });
 
@@ -98,15 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const idPlg = row.getAttribute('data-id-plg');
         
         openEditTransaksiModal(selectedTransaksiId, tgl, total, status, idPlg);
-    });
-
-    // Handle tombol hapus transaksi
-    document.getElementById('deleteSelectedTransaksi').addEventListener('click', function() {
-        if (!selectedTransaksiId) return;
-        
-        if (confirm('Apakah Anda yakin ingin menghapus transaksi ini?')) {
-            window.location.href = `?delete_transaksi=${selectedTransaksiId}`;
-        }
     });
 });
 
