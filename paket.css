@@ -1,0 +1,452 @@
+.paket {
+  background-color: #f5f3f6;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh; /* Ubah dari height fixed ke min-height */
+}
+    
+    .paket .div {
+  background-color: var(--variable-collection-grey-bg);
+  width: 1440px;
+  position: relative;
+  padding-bottom: 100px; /* Tambahkan padding bottom */
+}
+    
+    .paket .text-wrapper {
+      position: absolute;
+      width: max-content;
+      top: 128px;
+      left: 317px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 32px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+    
+    .paket .overlap-group {
+      position: fixed;
+      width: 255px;
+      height: 372px;
+      top: 105px;
+      left: 31px;
+      background-color: #ffffff;
+      border-radius: 14px;
+    }
+    
+    .paket .navigation-elements {
+      position: absolute;
+      width: 255px;
+      height: 40px;
+      top: 24px;
+      left: 0;
+    }
+    
+    .paket .img {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 8px;
+      left: 38px;
+    }
+    
+    .paket .text-wrapper-5 {
+      position: absolute;
+      width: 142px;
+      top: 10px;
+      left: 86px;
+      font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+      font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+      color: #000000de;
+      font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+      letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+      line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+      white-space: nowrap;
+      font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .paket .text-wrapper-5:hover,
+    .paket .text-wrapper-6:hover,
+    .paket .text-wrapper-7:hover,
+    .paket .text-wrapper-8:hover,
+    .paket .text-wrapper-9:hover,
+    .paket .text-wrapper-10:hover {
+      color: #2f80ed;
+      transform: scale(1.1);
+    }
+    
+    .paket .navigation-elements-2 {
+      top: 64px;
+      position: absolute;
+      width: 255px;
+      height: 40px;
+      left: 0;
+    }
+    
+    .paket .icon-social-people {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 11px;
+      left: 38px;
+    }
+    
+    .paket .text-wrapper-6 {
+      position: absolute;
+      width: 141px;
+      top: 13px;
+      left: 86px;
+      font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+      font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+      color: #000000;
+      font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+      letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+      line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+      white-space: nowrap;
+      font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .paket .navigation-elements-3 {
+      top: 111px;
+      position: absolute;
+      background-color: #eaf2fd;
+      width: 255px;
+      height: 40px;
+      left: 0;
+    }
+    
+    .paket .text-wrapper-7 {
+      position: absolute;
+      width: 137px;
+      top: 10px;
+      left: 86px;
+      font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+      font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+      color: var(--black-high-emphasis);
+      font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+      letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+      line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+      white-space: nowrap;
+      font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .paket .navigation-elements-4 {
+      top: 159px;
+      position: absolute;
+      width: 255px;
+      height: 40px;
+      left: 0;
+    }
+    
+    .paket .text-wrapper-8 {
+      position: absolute;
+      width: 136px;
+      top: 10px;
+      left: 86px;
+      font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+      font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+      color: var(--black-high-emphasis);
+      font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+      letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+      line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+      white-space: nowrap;
+      font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .paket .navigation-elements-5 {
+      top: 303px;
+      position: absolute;
+      width: 255px;
+      height: 40px;
+      left: 0;
+    }
+    
+    .paket .ri-logout-circle-r {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      top: 5px;
+      left: 36px;
+    }
+    
+    .paket .navigation-elements-6 {
+      top: 207px;
+      position: absolute;
+      width: 255px;
+      height: 40px;
+      left: 0;
+    }
+    
+    .paket .text-wrapper-9 {
+      position: absolute;
+      width: 137px;
+      top: 10px;
+      left: 86px;
+      font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+      font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+      color: #000000;
+      font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+      letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+      line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+      white-space: nowrap;
+      font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .paket .navigation-elements-7 {
+      top: 255px;
+      position: absolute;
+      width: 255px;
+      height: 40px;
+      left: 0;
+    }
+    
+    .paket .ionicons-svg-md-help {
+      position: absolute;
+      width: 24px;
+      height: 22px;
+      top: 0;
+      left: 0;
+    }
+    
+    .paket .text-wrapper-10 {
+      position: absolute;
+      width: 137px;
+      top: 10px;
+      left: 86px;
+      font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
+      font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
+      color: #2f80ed;
+      font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
+      letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
+      line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
+      white-space: nowrap;
+      font-style: var(--subtitle-2-med-14-21px-0-1px-font-style);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .paket .group {
+      position: absolute;
+      width: 1440px;
+      height: 67px;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      box-shadow: 0px 1px 1px #00000040;
+    }
+    
+    .paket .AWAN-laundry-wrapper {
+      position: relative;
+      width: 103px;
+      height: 40px;
+      top: 13px;
+      left: 71px;
+    }
+    
+    .paket .AWAN-laundry {
+      position: absolute;
+      width: 101px;
+      height: 40px;
+      top: 0;
+      left: 0;
+      font-family: "Fredoka One-Regular", Helvetica;
+      font-weight: 400;
+      color: var(--variable-collection-color);
+      font-size: 32px;
+      text-align: center;
+      letter-spacing: 0;
+      line-height: 20px;
+    }
+    
+    .paket .span {
+      font-family: "Fredoka One-Regular", Helvetica;
+      font-weight: 400;
+      color: #6ab4d4;
+      font-size: 32px;
+      letter-spacing: 0;
+      line-height: 20px;
+    }
+    
+    .paket .text-wrapper-11 {
+      font-size: 24px;
+    }
+    
+    .paket .overlap-group-wrapper {
+      position: absolute;
+      width: 1442px;
+      height: 28px;
+      top: 67px;
+      left: 0;
+    }
+    
+    .paket .div-wrapper {
+      position: relative;
+      width: 1440px;
+      height: 28px;
+      background-color: #6ab4d4;
+    }
+    
+    .paket .text-wrapper-12 {
+      position: absolute;
+      top: 3px;
+      left: 652px;
+      font-family: "Outfit-Regular", Helvetica;
+      font-weight: 400;
+      color: #fffbfb;
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+    
+    .paket .overlap-wrapper {
+      position: fixed;
+      width: 1442px;
+      height: 61px;
+      top: 963px;
+      left: 0;
+    }
+    
+    .paket .overlap-2 {
+      position: relative;
+      width: 1440px;
+      height: 61px;
+      background-color: #ffffff;
+    }
+    
+    .paket .text-wrapper-13 {
+      position: absolute;
+      width: 415px;
+      top: 14px;
+      left: 512px;
+      font-family: "Outfit-Regular", Helvetica;
+      font-weight: 400;
+      color: var(--variable-collection-font-navbar);
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+    /* CSS untuk card container */
+      .card-container {
+              display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+            gap: 20px;
+            width: calc(100% - 350px); /* Sesuaikan dengan sidebar */
+            margin-left: 300px; /* Jarak dari sidebar */
+            margin-top: 150px; /* Jarak dari header */
+            padding: 20px;
+
+}
+      /* CSS untuk card */
+      .card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        background-color: #fff;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      }
+      .card-img-placeholder {
+            height: 200px;
+            background-color: #6ab4d4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      .card-body {
+        padding: 20px;
+      }
+      
+      .card-title {
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      
+      .card-text {
+        color: #666;
+        margin-bottom: 15px;
+      }
+      
+      .price {
+        font-weight: bold;
+        color: #6ab4d4;
+        font-size: 1.2rem;
+      }
+      
+      .btn-order {
+        background-color: #6ab4d4;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .btn-order:hover {
+        background-color: #5aa3c2;
+        transform: translateY(-2px);
+      }
+      .btn-order:hover {
+        background-color: #5aa3c2;
+      }
+      
+      /* CSS lainnya yang sudah ada */
+      .overlap-group {
+        position: fixed;
+        width: 255px;
+        height: 372px;
+        top: 105px;
+        left: 31px;
+        background-color: #ffffff;
+        border-radius: 14px;
+        z-index: 10;
+      }
+
+      .card-img-from-db {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      /* Header */
+        .group {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        
+        /* Footer */
+        .overlap-wrapper {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        /* Hanya style untuk gambar */
+.card-img-custom {
+  max-width: 100%;
+  max-height: 120px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
