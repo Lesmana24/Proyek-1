@@ -1,10 +1,15 @@
-.kontak-kami {
-    background-color: #f5f3f6;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
+*.kontak-kami {
+  background-color: #f5f3f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
   
   .kontak-kami .div {
     background-color: var(--variable-collection-grey-bg);
@@ -117,7 +122,7 @@
   .kontak-kami .overlap-group {
     position: absolute;
     width: 255px;
-    height: 372px;
+    height: 317px;
     top: 105px;
     left: 31px;
     background-color: #ffffff;
@@ -184,6 +189,7 @@
 }
   .kontak-kami .navigation-elements-2 {
     top: 64px;
+    background-color: #eaf2fd;
     position: absolute;
     width: 255px;
     height: 40px;
@@ -304,7 +310,6 @@
   
   .kontak-kami .navigation-elements-7 {
     top: 255px;
-    background-color: #eaf2fd;
     position: absolute;
     width: 255px;
     height: 40px;
@@ -326,7 +331,7 @@
     left: 86px;
     font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
     font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
-    color: #2f80ed;
+    color: black;
     font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
     letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
     line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
@@ -445,4 +450,110 @@
     line-height: normal;
     white-space: nowrap;
   }
+
   
+ .profil-container {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 7rem 0 0 18rem; /* Atas: 7rem, Kanan: 0, Bawah: 0, Kiri: 10rem */
+}
+
+
+.profil-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.profil-card {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* opsional: agar tampilan lebih rapi */
+}
+
+.profil-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profil-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profil-avatar img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.input-nama,
+.input-telp {
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 6px 10px;
+  width: 80%;
+}
+
+
+.profil-form {
+    margin-top: 30px;
+  flex: 2;
+  min-width: 300px;
+}
+
+.profil-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profil-form input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profil-form button {
+  padding: 0.5rem;
+  background-color: #8ed0ec;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alamat-section {
+  margin-top: 2rem;
+}
+
+.alamat-section textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #f8f8f8;
+}
+
+.alamat-section button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #8ed0ec;
+  border: none;
+  color:white ;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+:root {
+  --black-high-emphasis: rgba(0, 0, 0, 0.87);
+  --subtitle-2-med-14-21px-0-1px-font-family: "Roboto", Helvetica;
+  --subtitle-2-med-14-21px-0-1px-font-weight: 500;
+  --subtitle-2-med-14-21px-0-1px-font-size: 14px;
+  --subtitle-2-med-14-21px-0-1px-letter-spacing: 0.10000000149011612px;
+  --subtitle-2-med-14-21px-0-1px-line-height: 21px;
+  --subtitle-2-med-14-21px-0-1px-font-style: normal;
+  --variable-collection-color: rgba(106, 181, 213, 1);
+  --variable-collection-color-2: rgba(25, 62, 132, 1);
+  --variable-collection-grey-bg: rgba(245, 243, 246, 1);
+  --variable-collection-blue-default: var(--variable-collection-color-duplicate);
+  --variable-collection-font-navbar: rgba(38, 50, 56, 1);
+  --variable-collection-color-4: rgba(109, 109, 109, 1);
+  --variable-collection-sosoft-grey: rgba(242, 242, 242, 1);
+  --variable-collection-color-duplicate: rgba(106, 181, 213, 1);
+}
