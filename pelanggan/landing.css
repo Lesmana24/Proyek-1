@@ -36,6 +36,8 @@
     letter-spacing: 0;
     line-height: normal;
   }
+
+  
   
   .landing-page .text-wrapper {
     color: #6ab4d4;
@@ -532,3 +534,4 @@
   .landing-page .text-wrapper-9:hover {color: #2f80ed;
     transform: scale(1.1);
   }
+  

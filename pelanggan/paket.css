@@ -6,6 +6,7 @@
   min-height: 100vh; /* Ubah dari height fixed ke min-height */
 }
     
+
     .paket .div {
   background-color: var(--variable-collection-grey-bg);
   width: 1440px;
@@ -27,9 +28,9 @@
     }
     
     .paket .overlap-group {
-      position: fixed;
+      position: absolute !important;
       width: 255px;
-      height: 372px;
+      height: 317px;
       top: 105px;
       left: 31px;
       background-color: #ffffff;
@@ -41,7 +42,7 @@
       width: 255px;
       height: 40px;
       top: 24px;
-      left: 0;
+      left: 0 !important;
     }
     
     .paket .img {
@@ -222,7 +223,7 @@
       left: 86px;
       font-family: var(--subtitle-2-med-14-21px-0-1px-font-family);
       font-weight: var(--subtitle-2-med-14-21px-0-1px-font-weight);
-      color: #2f80ed;
+      color: #000000;
       font-size: var(--subtitle-2-med-14-21px-0-1px-font-size);
       letter-spacing: var(--subtitle-2-med-14-21px-0-1px-letter-spacing);
       line-height: var(--subtitle-2-med-14-21px-0-1px-line-height);
@@ -411,16 +412,6 @@
       }
       
       /* CSS lainnya yang sudah ada */
-      .overlap-group {
-        position: fixed;
-        width: 255px;
-        height: 372px;
-        top: 105px;
-        left: 31px;
-        background-color: #ffffff;
-        border-radius: 14px;
-        z-index: 10;
-      }
 
       .card-img-from-db {
         height: 200px;
@@ -449,4 +440,23 @@
   max-height: 120px;
   display: block;
   margin: 0 auto 10px auto;
+}
+
+#successModal .modal-content {
+  background: #e8f5e9;
+  border: 2px solid #4CAF50;
+}
+
+#successModal .modal-header {
+  border-bottom-color: #4CAF50;
+}
+
+#successModal .modal-title {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+#successModal .modal-body {
+  font-size: 1.2em;
+  color: #1b5e20;
 }

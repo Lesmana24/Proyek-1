@@ -1,8 +1,7 @@
-
 <?php
 $servername = "localhost";
-$username = "";
-$password = "";
+$username = "Admin";
+$password = "Admin123";
 $dbname = "laundry";
 
 ini_set('memory_limit', '1G');
